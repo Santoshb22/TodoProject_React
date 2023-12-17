@@ -1,0 +1,33 @@
+.todoInput {
+    margin: 10px;
+}
+
+.input {
+    width:280px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: azure;
+    font-size:17px ;
+    padding: 0 8px;
+    margin: 0 10px;
+}
+
+.inputDate {
+    height: 30px;
+    border-radius: 8px;
+    background-color: azure;
+    padding: 0 8px;
+    font-size: larger;
+    margin: 0 10px;
+}
+
+.addButton {
+    height: 30px;
+    width: 75px;
+    border-radius: 8px;
+    background-color: rgb(91, 190, 16);
+    padding: 0 8px;
+    font-size: large;
+    margin: 0 10px;
+    font-weight: 600;
+}

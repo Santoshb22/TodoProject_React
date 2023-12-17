@@ -1,0 +1,35 @@
+.todoItems {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todoItem {
+    text-align: start;
+    border: 1px solid black;
+    width:280px;
+    height: 30px;
+    border-radius: 8px;
+    font-size:17px ;
+    padding: 5px 8px;
+    margin: 10px 10px;
+}
+
+span {
+    border: 1px solid black;
+    width: 145px;
+    height: 30px;
+    border-radius: 8px;
+    padding: 5px 8px;
+    margin: 0 10px;
+}
+
+button {
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgb(200, 3, 3);
+    padding: 0 8px;
+    font-size: large;
+    margin: 0 10px;
+    font-weight: 600;
+}
