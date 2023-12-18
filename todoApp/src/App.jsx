@@ -2,32 +2,32 @@ import TodoHeading from "./Components/TodoHeading"
 import TodoInput from "./Components/TodoInput"
 import TodoItems from "./Components/TodoItems"
 import styles from "./App.module.css"
+import { useState } from "react"
 
 function App() {
 
-  let todoItems = [
+  const [todoItems, setTodoItems] = useState([])
+
+  const handleNewTodoItems = (newTodoName, newTodoDate) => {
+   console.log(`name: ${newTodoName} date: ${newTodoDate}`)
+   const getValues = [
+    ...todoItems,
     {
-      id: "12A",
-      todo: "Workout",
-      date: "12/02/2024"
+      todo: newTodoName,
+      date: newTodoDate
     },
-    {
-      id: "12B",
-      todo: "Coding",
-      date: "13/02/2024"
-    },
-    {
-      id: "12C",
-      todo: "Lunch",
-      date: "13/02/2024"
-    } 
-  ]
+   ]
+   setTodoItems(getValues)
+
+   console.log(getValues)
+
+  }
 
   return (
    <>
    <div className={styles.todoAppContainer}>
    <TodoHeading/>
-   <TodoInput/>
+   <TodoInput onNewTodoItems = {handleNewTodoItems} />
    <TodoItems todoArrayItems = {todoItems}/>
    </div>
    </>
