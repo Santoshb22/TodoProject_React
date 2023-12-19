@@ -23,12 +23,18 @@ function App() {
 
   }
 
+ function handleDeleteitems(deletedItem) {
+  const newTodoItems = todoItems.filter((items) => items.todo !== deletedItem)
+
+  setTodoItems(newTodoItems)
+ }
+
   return (
    <>
    <div className={styles.todoAppContainer}>
    <TodoHeading/>
    <TodoInput onNewTodoItems = {handleNewTodoItems} />
-   <TodoItems todoArrayItems = {todoItems}/>
+   <TodoItems todoArrayItems = {todoItems} onDeleteItems = {handleDeleteitems} />
    </div>
    </>
   )
